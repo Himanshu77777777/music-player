@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="music-container">
+        <!-- Player Section -->
+        <div class="player-section">
+            <div class="player">
+                <img id="cover" src="coverr.jpeg" alt="Cover">
+                <h2 id="title">Song Name</h2>
+                <h3 id="artist">Artist Name</h3>
+
+                <audio id="audio" src=""></audio>
+
+                <input type="range" id="progress" min="0" value="0">
+                <div class="time">
+                    <span id="current-time">0:00</span>
+                    <span id="total-time">0:00</span>
+                </div>
+
+                <div class="controls">
+                    <button id="prev">⏮</button>
+                    <button id="play">▶</button>
+                    <button id="next">⏭</button>
+                    <button id="toggle-playlist">🎵</button>
+                </div>
+            </div>
+
+            <!-- Song List Below the Playbar -->
+            <div class="songlist-section">
+                <h2>Song List</h2>
+                <input type="text" id="search" placeholder="Search songs...">
+                <ul id="song-list"></ul>
+            </div>
+        </div>
+
+        <!-- Hidden Playlist Section -->
+        <div class="playlist-section">
+            <h2>Playlist <span id="close-playlist">❌</span></h2>
+            <ul id="playlist"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
